@@ -31,6 +31,7 @@
 		9C4D477A292F1FD300771B4E /* WorldCupProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */; };
 		9C4D4781292F9B6500771B4E /* TestResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4780292F9B6500771B4E /* TestResponseModel.swift */; };
 		9C4D4783292FA2E000771B4E /* TestRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4782292FA2E000771B4E /* TestRequestService.swift */; };
+		9C4D478A292FA60A00771B4E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4789292FA60A00771B4E /* HomeViewModel.swift */; };
 		FDE4ACB8E35DDEE842AD089A /* Pods_SporthecaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FD76A61FC7CBB0FC6C1C0D /* Pods_SporthecaTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupProgressView.swift; sourceTree = "<group>"; };
 		9C4D4780292F9B6500771B4E /* TestResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResponseModel.swift; sourceTree = "<group>"; };
 		9C4D4782292FA2E000771B4E /* TestRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestService.swift; sourceTree = "<group>"; };
+		9C4D4789292FA60A00771B4E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C6FD76A61FC7CBB0FC6C1C0D /* Pods_SporthecaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SporthecaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -248,6 +250,7 @@
 		9C4D477D292F9B3800771B4E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9C4D4789292FA60A00771B4E /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				9C4D4773292F132D00771B4E /* URLExtension.swift in Sources */,
 				9C4D4722292F121F00771B4E /* AppDelegate.swift in Sources */,
 				9C4D477A292F1FD300771B4E /* WorldCupProgressView.swift in Sources */,
+				9C4D478A292FA60A00771B4E /* HomeViewModel.swift in Sources */,
 				9C4D4772292F132D00771B4E /* UIColorExtension.swift in Sources */,
 				9C4D4781292F9B6500771B4E /* TestResponseModel.swift in Sources */,
 				9C4D4776292F135A00771B4E /* HomeViewController.swift in Sources */,

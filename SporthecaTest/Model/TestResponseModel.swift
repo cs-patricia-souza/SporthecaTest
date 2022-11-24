@@ -7,52 +7,79 @@
 
 import Foundation
 
-struct TestResponse: Codable {
-    let status: Int
-    let object: Player
+class TestResponse: NSObject, Codable {
+    var status: Int = 200
+    var object: Player?
     
     enum CodingKeys: String, CodingKey {
         case object = "Object"
         case status = "Status"
     }
-}
-
-struct Player: Codable {
-    let img: String
-    let name: String
-    let percentual: Double
-    let pos: String
-    let country: String
-    let barras: Barra
     
-    enum CodingKeys: String, CodingKey {
-        case barras = "Barras"
-        case img, name, percentual, pos, country
-    }
-}
-
-struct Barra: Codable {
-    let array: [BarrasItem]
-}
-
-struct BarrasItem: Codable {
-    let max: Int
-    let pla: Int
-    let pos: Int
-    let itemName: String
-    
-    enum CodingKeys: CodingKey {
-        case max, pla, pos
+    init(status: Int, object: Player) {
+        self.status = status
+        self.object = object
     }
     
-    init(from decoder: Decoder) throws {
-
+    override init() { }
+    
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        max = try container.decode(Int.self, forKey: CodingKeys.max)
-        pla = try container.decode(Int.self, forKey: CodingKeys.pla)
-        pos = try container.decode(Int.self, forKey: CodingKeys.pos)
+        status = try container.decode(Int.self, forKey: CodingKeys.status)
+        object = try container.decode(Player.self, forKey: CodingKeys.object)
+    }
+    
+    struct Player: Codable {
+        var img: String
+        var name: String
+        var percentual: Double
+        var pos: String
+        var country: String
+        var barras: Barra
+        
+        enum CodingKeys: String, CodingKey {
+            case barras = "Barras"
+            case img, name, percentual, pos, country
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        itemName = container.codingPath.first!.stringValue
+            barras = try container.decode(Barra.self, forKey: CodingKeys.barras)
+            img = try container.decode(String.self, forKey: CodingKeys.img)
+            name = try container.decode(String.self, forKey: CodingKeys.name)
+            percentual = try container.decode(Double.self, forKey: CodingKeys.percentual)
+            pos = try container.decode(String.self, forKey: CodingKeys.pos)
+            country = try container.decode(String.self, forKey: CodingKeys.country)
+        }
+        
+        func encode(to encoder: Encoder) throws { }
+    }
+
+    struct Barra: Codable {
+        var array: [BarrasItem]
+    }
+
+    struct BarrasItem: Codable {
+        var max: Int
+        var pla: Int
+        var pos: Int
+        var itemName: String
+        
+        enum CodingKeys: CodingKey {
+            case max, pla, pos
+        }
+        
+        init(from decoder: Decoder) throws {
+
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+
+            max = try container.decode(Int.self, forKey: CodingKeys.max)
+            pla = try container.decode(Int.self, forKey: CodingKeys.pla)
+            pos = try container.decode(Int.self, forKey: CodingKeys.pos)
+
+            itemName = container.codingPath.first!.stringValue
+        }
     }
 }

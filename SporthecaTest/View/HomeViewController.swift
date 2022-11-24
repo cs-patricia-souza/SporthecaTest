@@ -63,15 +63,6 @@ class HomeViewController: UIViewController {
         return label
     }()
     
-    lazy var countryFlag: UIImageView = {
-        let imageView = UIImageView()
-        imageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
-    }()
-    
     lazy var playerPosition: UILabel = {
         let label = UILabel()
         label.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -136,7 +127,6 @@ class HomeViewController: UIViewController {
         view.addSubview(playerPicture)
         view.addSubview(playerNameLabel)
         view.addSubview(playerCountry)
-        view.addSubview(countryFlag)
         view.addSubview(playerPosition)
         view.addSubview(playerScore)
         
@@ -152,10 +142,7 @@ class HomeViewController: UIViewController {
             playerNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             playerCountry.topAnchor.constraint(equalTo: playerNameLabel.bottomAnchor, constant: 10),
-            playerCountry.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -25),
-            
-            countryFlag.topAnchor.constraint(equalTo: playerNameLabel.bottomAnchor, constant: 10),
-            countryFlag.leadingAnchor.constraint(equalTo: playerCountry.trailingAnchor, constant: 10),
+            playerCountry.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             playerPosition.topAnchor.constraint(equalTo: playerCountry.bottomAnchor, constant: 10),
             playerPosition.centerXAnchor.constraint(equalTo: view.centerXAnchor),
