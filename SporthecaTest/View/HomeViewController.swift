@@ -23,18 +23,20 @@ class HomeViewController: UIViewController {
         imageView.clipsToBounds = true
         imageView.tintColor = ConstantColors.redSportheca
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.alpha = 0.5
         return imageView
     }()
     
     lazy var playerPicture: UIImageView = {
         let imageView = UIImageView()
-        imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
         imageView.contentMode = .scaleAspectFit
         imageView.layer.borderWidth = 1
         imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.layer.cornerRadius = 30
+        imageView.layer.cornerRadius = 40
         imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -137,7 +139,7 @@ class HomeViewController: UIViewController {
             background.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             background.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -(view.frame.width/2)),
             
-            playerPicture.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
+            playerPicture.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
             playerPicture.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             playerNameLabel.topAnchor.constraint(equalTo: playerPicture.bottomAnchor, constant: 10),
@@ -163,7 +165,7 @@ class HomeViewController: UIViewController {
     }
                                       
     private func updateUI() {
-        let player = homeViewModel.response.object?.first
+        let player = homeViewModel.response.object?.first?.player
         
         let url = URL(string: player?.img ?? defaultPlayerImageURLPath)
         self.playerPicture.kf.setImage(with: url)
@@ -172,18 +174,19 @@ class HomeViewController: UIViewController {
         self.playerPosition.text = player?.pos ?? "Fan"
         self.playerScore.text = "\(player?.percentual ?? 0.0)"
         
-        if let statistics = player?.barras {
-            for statistic in statistics.array.enumerated() {
-                addStatistcOnView(statistic.element)
-            }
+        if let copasDoMundoVencidas = player?.barras.copasDoMundoVencidas {
+            addStatistcOnView(copasDoMundoVencidas, title: "Copas do Mundo Vencidas")
+        }
+        
+        if let copasDoMundoDisputadas = player?.barras.copasDoMundoDisputadas {
+            addStatistcOnView(copasDoMundoDisputadas, title: "Copas do Mundo Disputadas")
         }
     }
     
-    private func addStatistcOnView(_ statistic: BarrasItem) {
+    private func addStatistcOnView(_ statistic: BarrasItem, title: String) {
         setupStatisticView()
         
-        worldCupsWonTitle.text = statistic.itemName
-        
+        worldCupsWonTitle.text = title
         worldCupsProgress.params = WorldCupProgressViewParams(max: statistic.max,
                                                               pla: statistic.pla,
                                                               pos: statistic.pos)
@@ -195,11 +198,12 @@ class HomeViewController: UIViewController {
         view.addSubview(worldCupsProgress)
         
         NSLayoutConstraint.activate([
-            worldCupsWonTitle.topAnchor.constraint(equalTo: playerScore.bottomAnchor, constant: 10),
-            worldCupsWonTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            worldCupsWonTitle.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
+            worldCupsWonTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             
             worldCupsProgress.topAnchor.constraint(equalTo: worldCupsWonTitle.bottomAnchor, constant: 10),
-            worldCupsProgress.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            worldCupsProgress.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            worldCupsProgress.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
         ])
         
         self.view.layoutIfNeeded()

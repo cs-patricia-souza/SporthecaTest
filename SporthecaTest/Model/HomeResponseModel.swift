@@ -32,12 +32,27 @@ class HomeResponse: NSObject, Codable {
 }
 
 struct Player: Codable {
+    var player: PlayerItem
+    
+    enum CodingKeys: String, CodingKey {
+        case player = "Player"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        player = try container.decode(PlayerItem.self, forKey: CodingKeys.player)
+    }
+    
+    func encode(to encoder: Encoder) throws { }
+}
+
+struct PlayerItem: Codable {
     var img: String
     var name: String
     var percentual: Double
     var pos: String
     var country: String
-    var barras: Barra
+    var barras: Barras
     
     enum CodingKeys: String, CodingKey {
         case barras = "Barras"
@@ -47,7 +62,7 @@ struct Player: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        barras = try container.decode(Barra.self, forKey: CodingKeys.barras)
+        barras = try container.decode(Barras.self, forKey: CodingKeys.barras)
         img = try container.decode(String.self, forKey: CodingKeys.img)
         name = try container.decode(String.self, forKey: CodingKeys.name)
         percentual = try container.decode(Double.self, forKey: CodingKeys.percentual)
@@ -58,15 +73,29 @@ struct Player: Codable {
     func encode(to encoder: Encoder) throws { }
 }
 
-struct Barra: Codable {
-    var array: [BarrasItem]
+struct Barras: Codable {
+    var copasDoMundoVencidas: BarrasItem
+    var copasDoMundoDisputadas: BarrasItem
+    
+    enum CodingKeys: String, CodingKey {
+        case copasDoMundoVencidas = "Copas_do_Mundo_Vencidas"
+        case copasDoMundoDisputadas = "Copas_do_Mundo_Disputadas"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        copasDoMundoVencidas = try container.decode(BarrasItem.self, forKey: CodingKeys.copasDoMundoVencidas)
+        copasDoMundoDisputadas = try container.decode(BarrasItem.self, forKey: CodingKeys.copasDoMundoDisputadas)
+    }
+    
+    func encode(to encoder: Encoder) throws { }
 }
 
 struct BarrasItem: Codable {
     var max: Int
     var pla: Int
     var pos: Int
-    var itemName: String
     
     enum CodingKeys: CodingKey {
         case max, pla, pos
@@ -79,7 +108,5 @@ struct BarrasItem: Codable {
         max = try container.decode(Int.self, forKey: CodingKeys.max)
         pla = try container.decode(Int.self, forKey: CodingKeys.pla)
         pos = try container.decode(Int.self, forKey: CodingKeys.pos)
-
-        itemName = container.codingPath.first!.stringValue
     }
 }
