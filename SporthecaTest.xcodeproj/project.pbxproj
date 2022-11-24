@@ -29,6 +29,8 @@
 		9C4D4773292F132D00771B4E /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4771292F132D00771B4E /* URLExtension.swift */; };
 		9C4D4776292F135A00771B4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4775292F135A00771B4E /* HomeViewController.swift */; };
 		9C4D477A292F1FD300771B4E /* WorldCupProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */; };
+		9C4D4781292F9B6500771B4E /* TestResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4780292F9B6500771B4E /* TestResponseModel.swift */; };
+		9C4D4783292FA2E000771B4E /* TestRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4782292FA2E000771B4E /* TestRequestService.swift */; };
 		FDE4ACB8E35DDEE842AD089A /* Pods_SporthecaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FD76A61FC7CBB0FC6C1C0D /* Pods_SporthecaTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		9C4D4771292F132D00771B4E /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		9C4D4775292F135A00771B4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupProgressView.swift; sourceTree = "<group>"; };
+		9C4D4780292F9B6500771B4E /* TestResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResponseModel.swift; sourceTree = "<group>"; };
+		9C4D4782292FA2E000771B4E /* TestRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestService.swift; sourceTree = "<group>"; };
 		C6FD76A61FC7CBB0FC6C1C0D /* Pods_SporthecaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SporthecaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +145,9 @@
 		9C4D4720292F121F00771B4E /* SporthecaTest */ = {
 			isa = PBXGroup;
 			children = (
+				9C4D477E292F9B4000771B4E /* Service */,
+				9C4D477D292F9B3800771B4E /* ViewModel */,
+				9C4D477C292F9B2E00771B4E /* Model */,
 				9C4D4774292F133F00771B4E /* View */,
 				9C4D476F292F132000771B4E /* Extensions */,
 				9C4D4755292F129700771B4E /* Support */,
@@ -228,6 +235,29 @@
 				9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9C4D477C292F9B2E00771B4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4780292F9B6500771B4E /* TestResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C4D477D292F9B3800771B4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C4D477E292F9B4000771B4E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4782292FA2E000771B4E /* TestRequestService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		EB0264378F494A5BC847D8D2 /* Frameworks */ = {
@@ -446,7 +476,9 @@
 				9C4D4722292F121F00771B4E /* AppDelegate.swift in Sources */,
 				9C4D477A292F1FD300771B4E /* WorldCupProgressView.swift in Sources */,
 				9C4D4772292F132D00771B4E /* UIColorExtension.swift in Sources */,
+				9C4D4781292F9B6500771B4E /* TestResponseModel.swift in Sources */,
 				9C4D4776292F135A00771B4E /* HomeViewController.swift in Sources */,
+				9C4D4783292FA2E000771B4E /* TestRequestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
