@@ -91,6 +91,7 @@ class HomeViewController: UIViewController {
         label.layer.cornerRadius = 40
         label.layer.masksToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
         
         return label
     }()
@@ -145,7 +146,7 @@ class HomeViewController: UIViewController {
             playerNameLabel.topAnchor.constraint(equalTo: playerPicture.bottomAnchor, constant: 10),
             playerNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            playerCountry.topAnchor.constraint(equalTo: playerNameLabel.bottomAnchor, constant: 10),
+            playerCountry.topAnchor.constraint(equalTo: playerNameLabel.bottomAnchor, constant: 30),
             playerCountry.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             playerPosition.topAnchor.constraint(equalTo: playerCountry.bottomAnchor, constant: 10),
@@ -172,7 +173,7 @@ class HomeViewController: UIViewController {
         self.playerNameLabel.text = player?.name ?? "Jon"
         self.playerCountry.text = player?.country ?? "Nowhere"
         self.playerPosition.text = player?.pos ?? "Fan"
-        self.playerScore.text = "\(player?.percentual ?? 0.0)"
+        self.playerScore.text = "\(Double(round(1000 * (player?.percentual ?? 0.0)) / 1000))"
         
         if let copasDoMundoVencidas = player?.barras.copasDoMundoVencidas {
             addStatistcOnView(copasDoMundoVencidas, title: "Copas do Mundo Vencidas")
