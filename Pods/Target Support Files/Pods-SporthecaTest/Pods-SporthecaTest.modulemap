@@ -1,0 +1,6 @@
+framework module Pods_SporthecaTest {
+  umbrella header "Pods-SporthecaTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

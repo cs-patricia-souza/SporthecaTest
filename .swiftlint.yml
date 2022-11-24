@@ -1,0 +1,41 @@
+# https://realm.github.io/SwiftLint/rule-directory.html
+# https://github.com/realm/SwiftLint
+
+disabled_rules: # rule identifiers to exclude from running
+    - force_cast
+    - force_try
+    - variable_name
+    - type_name
+    - file_length
+    - type_body_length
+    - cyclomatic_complexity
+    - function_body_length
+    - valid_docs
+    - trailing_whitespace
+    - shorthand_operator
+    - function_parameter_count
+    - large_tuple
+
+opt_in_rules:
+   - multiple_empty_lines
+
+included:
+    - SporthecaTest
+
+excluded:
+    - Pods
+
+line_length:
+    warning: 120
+    error: 200
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_urls: true
+
+custom_rules:
+    multiple_empty_lines:
+      included: ".*.swift"
+      name: "Multiple Empty Lines"
+      regex: '((?:\s*\n){3,})'
+      message: "There are too many line breaks"
+      severity: error

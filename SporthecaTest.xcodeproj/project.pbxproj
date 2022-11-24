@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C4D4722292F121F00771B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4721292F121F00771B4E /* AppDelegate.swift */; };
+		9C4D472B292F122100771B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D472A292F122100771B4E /* Assets.xcassets */; };
+		9C4D472E292F122100771B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D472C292F122100771B4E /* LaunchScreen.storyboard */; };
+		9C4D4739292F122100771B4E /* SporthecaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4738292F122100771B4E /* SporthecaTestTests.swift */; };
+		9C4D4743292F122100771B4E /* SporthecaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4742292F122100771B4E /* SporthecaTestUITests.swift */; };
+		9C4D4745292F122100771B4E /* SporthecaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4744292F122100771B4E /* SporthecaTestUITestsLaunchTests.swift */; };
+		9C4D4763292F12C200771B4E /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D4757292F12C100771B4E /* OpenSans-ExtraBoldItalic.ttf */; };
+		9C4D4764292F12C200771B4E /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D4758292F12C200771B4E /* OpenSans-Bold.ttf */; };
+		9C4D4765292F12C200771B4E /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D4759292F12C200771B4E /* OpenSans-BoldItalic.ttf */; };
+		9C4D4766292F12C200771B4E /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D475A292F12C200771B4E /* OpenSans-Italic.ttf */; };
+		9C4D4767292F12C200771B4E /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D475B292F12C200771B4E /* OpenSans-Light.ttf */; };
+		9C4D4768292F12C200771B4E /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D475C292F12C200771B4E /* OpenSans-SemiBoldItalic.ttf */; };
+		9C4D4769292F12C200771B4E /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D475D292F12C200771B4E /* OpenSans-LightItalic.ttf */; };
+		9C4D476A292F12C200771B4E /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D475E292F12C200771B4E /* OpenSans-Medium.ttf */; };
+		9C4D476B292F12C200771B4E /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D475F292F12C200771B4E /* OpenSans-ExtraBold.ttf */; };
+		9C4D476C292F12C200771B4E /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D4760292F12C200771B4E /* OpenSans-MediumItalic.ttf */; };
+		9C4D476D292F12C200771B4E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D4761292F12C200771B4E /* OpenSans-Regular.ttf */; };
+		9C4D476E292F12C200771B4E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D4762292F12C200771B4E /* OpenSans-SemiBold.ttf */; };
+		9C4D4772292F132D00771B4E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4770292F132D00771B4E /* UIColorExtension.swift */; };
+		9C4D4773292F132D00771B4E /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4771292F132D00771B4E /* URLExtension.swift */; };
+		9C4D4776292F135A00771B4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4775292F135A00771B4E /* HomeViewController.swift */; };
+		9C4D477A292F1FD300771B4E /* WorldCupProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */; };
+		FDE4ACB8E35DDEE842AD089A /* Pods_SporthecaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FD76A61FC7CBB0FC6C1C0D /* Pods_SporthecaTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C4D4735292F122100771B4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C4D4716292F121F00771B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C4D471D292F121F00771B4E;
+			remoteInfo = SporthecaTest;
+		};
+		9C4D473F292F122100771B4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C4D4716292F121F00771B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C4D471D292F121F00771B4E;
+			remoteInfo = SporthecaTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DD85D5132CDE7ACE362F2E3 /* Pods-SporthecaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SporthecaTest.release.xcconfig"; path = "Target Support Files/Pods-SporthecaTest/Pods-SporthecaTest.release.xcconfig"; sourceTree = "<group>"; };
+		301A0BEC264C6CF7C03C7B89 /* Pods-SporthecaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SporthecaTest.debug.xcconfig"; path = "Target Support Files/Pods-SporthecaTest/Pods-SporthecaTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9C4D471E292F121F00771B4E /* SporthecaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SporthecaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4D4721292F121F00771B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C4D472A292F122100771B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C4D472D292F122100771B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C4D472F292F122100771B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C4D4734292F122100771B4E /* SporthecaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SporthecaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4D4738292F122100771B4E /* SporthecaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SporthecaTestTests.swift; sourceTree = "<group>"; };
+		9C4D473E292F122100771B4E /* SporthecaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SporthecaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4D4742292F122100771B4E /* SporthecaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SporthecaTestUITests.swift; sourceTree = "<group>"; };
+		9C4D4744292F122100771B4E /* SporthecaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SporthecaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C4D4757292F12C100771B4E /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		9C4D4758292F12C200771B4E /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		9C4D4759292F12C200771B4E /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9C4D475A292F12C200771B4E /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		9C4D475B292F12C200771B4E /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		9C4D475C292F12C200771B4E /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		9C4D475D292F12C200771B4E /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		9C4D475E292F12C200771B4E /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		9C4D475F292F12C200771B4E /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9C4D4760292F12C200771B4E /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		9C4D4761292F12C200771B4E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		9C4D4762292F12C200771B4E /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		9C4D4770292F132D00771B4E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		9C4D4771292F132D00771B4E /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		9C4D4775292F135A00771B4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupProgressView.swift; sourceTree = "<group>"; };
+		C6FD76A61FC7CBB0FC6C1C0D /* Pods_SporthecaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SporthecaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C4D471B292F121F00771B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDE4ACB8E35DDEE842AD089A /* Pods_SporthecaTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4D4731292F122100771B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4D473B292F122100771B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02A2BDE16839A1C5583E1C92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				301A0BEC264C6CF7C03C7B89 /* Pods-SporthecaTest.debug.xcconfig */,
+				2DD85D5132CDE7ACE362F2E3 /* Pods-SporthecaTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C4D4715292F121F00771B4E = {
+			isa = PBXGroup;
+			children = (
+				9C4D4720292F121F00771B4E /* SporthecaTest */,
+				9C4D4737292F122100771B4E /* SporthecaTestTests */,
+				9C4D4741292F122100771B4E /* SporthecaTestUITests */,
+				9C4D471F292F121F00771B4E /* Products */,
+				02A2BDE16839A1C5583E1C92 /* Pods */,
+				EB0264378F494A5BC847D8D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9C4D471F292F121F00771B4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D471E292F121F00771B4E /* SporthecaTest.app */,
+				9C4D4734292F122100771B4E /* SporthecaTestTests.xctest */,
+				9C4D473E292F122100771B4E /* SporthecaTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C4D4720292F121F00771B4E /* SporthecaTest */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4774292F133F00771B4E /* View */,
+				9C4D476F292F132000771B4E /* Extensions */,
+				9C4D4755292F129700771B4E /* Support */,
+				9C4D4751292F126100771B4E /* StartUp */,
+			);
+			path = SporthecaTest;
+			sourceTree = "<group>";
+		};
+		9C4D4737292F122100771B4E /* SporthecaTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4738292F122100771B4E /* SporthecaTestTests.swift */,
+			);
+			path = SporthecaTestTests;
+			sourceTree = "<group>";
+		};
+		9C4D4741292F122100771B4E /* SporthecaTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4742292F122100771B4E /* SporthecaTestUITests.swift */,
+				9C4D4744292F122100771B4E /* SporthecaTestUITestsLaunchTests.swift */,
+			);
+			path = SporthecaTestUITests;
+			sourceTree = "<group>";
+		};
+		9C4D4751292F126100771B4E /* StartUp */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4721292F121F00771B4E /* AppDelegate.swift */,
+				9C4D472A292F122100771B4E /* Assets.xcassets */,
+				9C4D472C292F122100771B4E /* LaunchScreen.storyboard */,
+				9C4D472F292F122100771B4E /* Info.plist */,
+			);
+			path = StartUp;
+			sourceTree = "<group>";
+		};
+		9C4D4755292F129700771B4E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4778292F1F8800771B4E /* UI */,
+				9C4D4756292F12A000771B4E /* fonts */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9C4D4756292F12A000771B4E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4758292F12C200771B4E /* OpenSans-Bold.ttf */,
+				9C4D4759292F12C200771B4E /* OpenSans-BoldItalic.ttf */,
+				9C4D475F292F12C200771B4E /* OpenSans-ExtraBold.ttf */,
+				9C4D4757292F12C100771B4E /* OpenSans-ExtraBoldItalic.ttf */,
+				9C4D475A292F12C200771B4E /* OpenSans-Italic.ttf */,
+				9C4D475B292F12C200771B4E /* OpenSans-Light.ttf */,
+				9C4D475D292F12C200771B4E /* OpenSans-LightItalic.ttf */,
+				9C4D475E292F12C200771B4E /* OpenSans-Medium.ttf */,
+				9C4D4760292F12C200771B4E /* OpenSans-MediumItalic.ttf */,
+				9C4D4761292F12C200771B4E /* OpenSans-Regular.ttf */,
+				9C4D4762292F12C200771B4E /* OpenSans-SemiBold.ttf */,
+				9C4D475C292F12C200771B4E /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		9C4D476F292F132000771B4E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4770292F132D00771B4E /* UIColorExtension.swift */,
+				9C4D4771292F132D00771B4E /* URLExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C4D4774292F133F00771B4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4775292F135A00771B4E /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C4D4778292F1F8800771B4E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D4779292F1FD300771B4E /* WorldCupProgressView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EB0264378F494A5BC847D8D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6FD76A61FC7CBB0FC6C1C0D /* Pods_SporthecaTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C4D471D292F121F00771B4E /* SporthecaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C4D4748292F122100771B4E /* Build configuration list for PBXNativeTarget "SporthecaTest" */;
+			buildPhases = (
+				311883750EC7434A5F0AEBCE /* [CP] Check Pods Manifest.lock */,
+				9C4D471A292F121F00771B4E /* Sources */,
+				9C4D471B292F121F00771B4E /* Frameworks */,
+				9C4D471C292F121F00771B4E /* Resources */,
+				B3C3FDE68838D9CC30280153 /* [CP] Embed Pods Frameworks */,
+				9C4D477B292F359500771B4E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SporthecaTest;
+			productName = SporthecaTest;
+			productReference = 9C4D471E292F121F00771B4E /* SporthecaTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C4D4733292F122100771B4E /* SporthecaTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C4D474B292F122100771B4E /* Build configuration list for PBXNativeTarget "SporthecaTestTests" */;
+			buildPhases = (
+				9C4D4730292F122100771B4E /* Sources */,
+				9C4D4731292F122100771B4E /* Frameworks */,
+				9C4D4732292F122100771B4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C4D4736292F122100771B4E /* PBXTargetDependency */,
+			);
+			name = SporthecaTestTests;
+			productName = SporthecaTestTests;
+			productReference = 9C4D4734292F122100771B4E /* SporthecaTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C4D473D292F122100771B4E /* SporthecaTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C4D474E292F122100771B4E /* Build configuration list for PBXNativeTarget "SporthecaTestUITests" */;
+			buildPhases = (
+				9C4D473A292F122100771B4E /* Sources */,
+				9C4D473B292F122100771B4E /* Frameworks */,
+				9C4D473C292F122100771B4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C4D4740292F122100771B4E /* PBXTargetDependency */,
+			);
+			name = SporthecaTestUITests;
+			productName = SporthecaTestUITests;
+			productReference = 9C4D473E292F122100771B4E /* SporthecaTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C4D4716292F121F00771B4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					9C4D471D292F121F00771B4E = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					9C4D4733292F122100771B4E = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 9C4D471D292F121F00771B4E;
+					};
+					9C4D473D292F122100771B4E = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 9C4D471D292F121F00771B4E;
+					};
+				};
+			};
+			buildConfigurationList = 9C4D4719292F121F00771B4E /* Build configuration list for PBXProject "SporthecaTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C4D4715292F121F00771B4E;
+			productRefGroup = 9C4D471F292F121F00771B4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C4D471D292F121F00771B4E /* SporthecaTest */,
+				9C4D4733292F122100771B4E /* SporthecaTestTests */,
+				9C4D473D292F122100771B4E /* SporthecaTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C4D471C292F121F00771B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4D4768292F12C200771B4E /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				9C4D476B292F12C200771B4E /* OpenSans-ExtraBold.ttf in Resources */,
+				9C4D476E292F12C200771B4E /* OpenSans-SemiBold.ttf in Resources */,
+				9C4D472E292F122100771B4E /* LaunchScreen.storyboard in Resources */,
+				9C4D4763292F12C200771B4E /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				9C4D476C292F12C200771B4E /* OpenSans-MediumItalic.ttf in Resources */,
+				9C4D4767292F12C200771B4E /* OpenSans-Light.ttf in Resources */,
+				9C4D4764292F12C200771B4E /* OpenSans-Bold.ttf in Resources */,
+				9C4D4766292F12C200771B4E /* OpenSans-Italic.ttf in Resources */,
+				9C4D472B292F122100771B4E /* Assets.xcassets in Resources */,
+				9C4D4765292F12C200771B4E /* OpenSans-BoldItalic.ttf in Resources */,
+				9C4D476A292F12C200771B4E /* OpenSans-Medium.ttf in Resources */,
+				9C4D476D292F12C200771B4E /* OpenSans-Regular.ttf in Resources */,
+				9C4D4769292F12C200771B4E /* OpenSans-LightItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4D4732292F122100771B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4D473C292F122100771B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		311883750EC7434A5F0AEBCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SporthecaTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C4D477B292F359500771B4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		B3C3FDE68838D9CC30280153 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SporthecaTest/Pods-SporthecaTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SporthecaTest/Pods-SporthecaTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SporthecaTest/Pods-SporthecaTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C4D471A292F121F00771B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4D4773292F132D00771B4E /* URLExtension.swift in Sources */,
+				9C4D4722292F121F00771B4E /* AppDelegate.swift in Sources */,
+				9C4D477A292F1FD300771B4E /* WorldCupProgressView.swift in Sources */,
+				9C4D4772292F132D00771B4E /* UIColorExtension.swift in Sources */,
+				9C4D4776292F135A00771B4E /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4D4730292F122100771B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4D4739292F122100771B4E /* SporthecaTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4D473A292F122100771B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4D4745292F122100771B4E /* SporthecaTestUITestsLaunchTests.swift in Sources */,
+				9C4D4743292F122100771B4E /* SporthecaTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C4D4736292F122100771B4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C4D471D292F121F00771B4E /* SporthecaTest */;
+			targetProxy = 9C4D4735292F122100771B4E /* PBXContainerItemProxy */;
+		};
+		9C4D4740292F122100771B4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C4D471D292F121F00771B4E /* SporthecaTest */;
+			targetProxy = 9C4D473F292F122100771B4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C4D472C292F122100771B4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C4D472D292F122100771B4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C4D4746292F122100771B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C4D4747292F122100771B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C4D4749292F122100771B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 301A0BEC264C6CF7C03C7B89 /* Pods-SporthecaTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SporthecaTest/StartUp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PattySouza.SporthecaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C4D474A292F122100771B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DD85D5132CDE7ACE362F2E3 /* Pods-SporthecaTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SporthecaTest/StartUp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PattySouza.SporthecaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C4D474C292F122100771B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PattySouza.SporthecaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SporthecaTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SporthecaTest";
+			};
+			name = Debug;
+		};
+		9C4D474D292F122100771B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PattySouza.SporthecaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SporthecaTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SporthecaTest";
+			};
+			name = Release;
+		};
+		9C4D474F292F122100771B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PattySouza.SporthecaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SporthecaTest;
+			};
+			name = Debug;
+		};
+		9C4D4750292F122100771B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PattySouza.SporthecaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SporthecaTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C4D4719292F121F00771B4E /* Build configuration list for PBXProject "SporthecaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4D4746292F122100771B4E /* Debug */,
+				9C4D4747292F122100771B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C4D4748292F122100771B4E /* Build configuration list for PBXNativeTarget "SporthecaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4D4749292F122100771B4E /* Debug */,
+				9C4D474A292F122100771B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C4D474B292F122100771B4E /* Build configuration list for PBXNativeTarget "SporthecaTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4D474C292F122100771B4E /* Debug */,
+				9C4D474D292F122100771B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C4D474E292F122100771B4E /* Build configuration list for PBXNativeTarget "SporthecaTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4D474F292F122100771B4E /* Debug */,
+				9C4D4750292F122100771B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C4D4716292F121F00771B4E /* Project object */;
+}
