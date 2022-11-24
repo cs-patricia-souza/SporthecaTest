@@ -17,5 +17,11 @@
 		<string>OpenSans-SemiBold</string>
 		<string>OpenSans-SemiBoldItalic</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+        <dict>
+            <!--Include to allow all connections (DANGER)-->
+            <key>NSAllowsArbitraryLoads</key>
+            <true/>
+        </dict>
 </dict>
 </plist>

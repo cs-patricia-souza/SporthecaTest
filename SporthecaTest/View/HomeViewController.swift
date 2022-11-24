@@ -96,21 +96,17 @@ class HomeViewController: UIViewController {
         return label
     }()
     
-    lazy var worldCupsWonTitle: UILabel = {
-        let label = UILabel()
-        label.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        label.textColor = .white
-        label.backgroundColor = .clear
-        label.isUserInteractionEnabled = false
-        label.font = UIFont(name: "OpenSans-Medium", size: 14)
-        label.numberOfLines = 1
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
+    lazy var worldCupsWonView: WorldCupProgressView = {
+        let progress = WorldCupProgressView()
+        progress.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        progress.translatesAutoresizingMaskIntoConstraints = false
+        progress.backgroundColor = .clear
+        return progress
     }()
     
-    lazy var worldCupsProgress: WorldCupProgressView = {
+    lazy var worldCupsDisputedView: WorldCupProgressView = {
         let progress = WorldCupProgressView()
+        progress.heightAnchor.constraint(equalToConstant: 80).isActive = true
         progress.translatesAutoresizingMaskIntoConstraints = false
         progress.backgroundColor = .clear
         return progress
@@ -134,6 +130,8 @@ class HomeViewController: UIViewController {
         view.addSubview(playerCountry)
         view.addSubview(playerPosition)
         view.addSubview(playerScore)
+        view.addSubview(worldCupsWonView)
+        view.addSubview(worldCupsDisputedView)
         
         NSLayoutConstraint.activate([
             background.topAnchor.constraint(equalTo: view.topAnchor),
@@ -153,7 +151,15 @@ class HomeViewController: UIViewController {
             playerPosition.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             playerScore.topAnchor.constraint(equalTo: playerPosition.bottomAnchor, constant: 10),
-            playerScore.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            playerScore.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            worldCupsWonView.topAnchor.constraint(equalTo: playerScore.bottomAnchor, constant: 100),
+            worldCupsWonView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            worldCupsWonView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            
+            worldCupsDisputedView.topAnchor.constraint(equalTo: worldCupsWonView.bottomAnchor, constant: 10),
+            worldCupsDisputedView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            worldCupsDisputedView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
         ])
     }
     
@@ -176,37 +182,20 @@ class HomeViewController: UIViewController {
         self.playerScore.text = "\(Double(round(1000 * (player?.percentual ?? 0.0)) / 1000))"
         
         if let copasDoMundoVencidas = player?.barras.copasDoMundoVencidas {
-            addStatistcOnView(copasDoMundoVencidas, title: "Copas do Mundo Vencidas")
+            worldCupsWonView.params = WorldCupProgressViewParams(max: copasDoMundoVencidas.max,
+                                                                 pla: copasDoMundoVencidas.pla,
+                                                                 pos: copasDoMundoVencidas.pos,
+                                                                 title: "Copas do Mundo Vencidas")
+            worldCupsWonView.fillProgressView()
         }
         
         if let copasDoMundoDisputadas = player?.barras.copasDoMundoDisputadas {
-            addStatistcOnView(copasDoMundoDisputadas, title: "Copas do Mundo Disputadas")
+            worldCupsDisputedView.params = WorldCupProgressViewParams(max: copasDoMundoDisputadas.max,
+                                                                 pla: copasDoMundoDisputadas.pla,
+                                                                 pos: copasDoMundoDisputadas.pos,
+                                                                 title: "Copas do Mundo Disputadas")
+            worldCupsDisputedView.fillProgressView()
         }
-    }
-    
-    private func addStatistcOnView(_ statistic: BarrasItem, title: String) {
-        setupStatisticView()
-        
-        worldCupsWonTitle.text = title
-        worldCupsProgress.params = WorldCupProgressViewParams(max: statistic.max,
-                                                              pla: statistic.pla,
-                                                              pos: statistic.pos)
-        worldCupsProgress.fillProgressView()
-    }
-    
-    private func setupStatisticView() {
-        view.addSubview(worldCupsWonTitle)
-        view.addSubview(worldCupsProgress)
-        
-        NSLayoutConstraint.activate([
-            worldCupsWonTitle.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
-            worldCupsWonTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            
-            worldCupsProgress.topAnchor.constraint(equalTo: worldCupsWonTitle.bottomAnchor, constant: 10),
-            worldCupsProgress.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            worldCupsProgress.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
-        ])
-        
         self.view.layoutIfNeeded()
     }
 }

@@ -12,6 +12,7 @@ struct WorldCupProgressViewParams {
     let max: Int
     let pla: Int
     let pos: Int
+    let title: String
 }
 
 @IBDesignable
@@ -33,6 +34,19 @@ class WorldCupProgressView: UIView {
     
     @IBInspectable var barBackgroundColor: UIColor = .clear
     @IBInspectable var barForegroundColor: UIColor = ConstantColors.redSportheca
+    
+    lazy var progressTitle: UILabel = {
+        let label = UILabel()
+        label.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        label.textColor = .white
+        label.backgroundColor = .clear
+        label.isUserInteractionEnabled = false
+        label.font = UIFont(name: "OpenSans-Medium", size: 14)
+        label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
     
     private lazy var insideLabel: UILabel = {
         let label = UILabel()
@@ -76,6 +90,9 @@ class WorldCupProgressView: UIView {
     }
     
     private func setupView() {
+        self.barBackgroundColor = .clear
+        
+        self.addSubview(self.progressTitle)
         self.addSubview(self.progressView)
         self.addSubview(self.outsideLabel)
         self.progressView.addSubview(self.insideLabel)
@@ -86,6 +103,10 @@ class WorldCupProgressView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
+            self.progressTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.progressTitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 10),
+            
+            self.progressView.topAnchor.constraint(equalTo: progressTitle.bottomAnchor, constant: 10),
             self.progressView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             self.progressView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 10),
             
@@ -106,6 +127,7 @@ class WorldCupProgressView: UIView {
         self.progressView.setProgress(Float(Float(params.pla) / Float(params.max)), animated: true)
         self.insideLabel.text = "\(Double(params.pla))"
         self.outsideLabel.text = "\(params.pos)º"
+        self.progressTitle.text = params.title
         
         self.progressView.setNeedsLayout()
         self.progressView.layoutIfNeeded()
