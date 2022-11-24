@@ -7,13 +7,14 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
     // MARK: Variables
-    let flagURLPath = "https://countryflagsapi.com/png/"
+    let defaultPlayerImageURLPath = "https://cdn-icons-png.flaticon.com/512/3333/3333673.png"
+    var homeViewModel = HomeViewModel()
     
     // MARK: Layout
-    
     lazy var background: UIImageView = {
         let imageView = UIImageView()
         imageView.widthAnchor.constraint(equalToConstant: view.frame.height/2).isActive = true
@@ -115,8 +116,9 @@ class HomeViewController: UIViewController {
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeViewModel.configure(self, viewModelProtocol: self)
         setupViews()
-        configureProgress()
+        fetchInfo()
     }
     
     // MARK: Setup View
@@ -152,8 +154,66 @@ class HomeViewController: UIViewController {
         ])
     }
     
-    private func configureProgress() {
-        worldCupsProgress.params = WorldCupProgressViewParams(max: 3, pla: 1, pos: 18)
+    private func fetchInfo() {
+        self.homeViewModel.fetchPlayerInfo { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.updateUI()
+            }
+        }
+    }
+                                      
+    private func updateUI() {
+        let player = homeViewModel.response.object?.first
+        
+        let url = URL(string: player?.img ?? defaultPlayerImageURLPath)
+        self.playerPicture.kf.setImage(with: url)
+        self.playerNameLabel.text = player?.name ?? "Jon"
+        self.playerCountry.text = player?.country ?? "Nowhere"
+        self.playerPosition.text = player?.pos ?? "Fan"
+        self.playerScore.text = "\(player?.percentual ?? 0.0)"
+        
+        if let statistics = player?.barras {
+            for statistic in statistics.array.enumerated() {
+                addStatistcOnView(statistic.element)
+            }
+        }
+    }
+    
+    private func addStatistcOnView(_ statistic: BarrasItem) {
+        setupStatisticView()
+        
+        worldCupsWonTitle.text = statistic.itemName
+        
+        worldCupsProgress.params = WorldCupProgressViewParams(max: statistic.max,
+                                                              pla: statistic.pla,
+                                                              pos: statistic.pos)
         worldCupsProgress.fillProgressView()
+    }
+    
+    private func setupStatisticView() {
+        view.addSubview(worldCupsWonTitle)
+        view.addSubview(worldCupsProgress)
+        
+        NSLayoutConstraint.activate([
+            worldCupsWonTitle.topAnchor.constraint(equalTo: playerScore.bottomAnchor, constant: 10),
+            worldCupsWonTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            
+            worldCupsProgress.topAnchor.constraint(equalTo: worldCupsWonTitle.bottomAnchor, constant: 10),
+            worldCupsProgress.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        ])
+        
+        self.view.layoutIfNeeded()
+    }
+}
+
+extension HomeViewController: HomeViewModelProtocol {
+    func showError() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Oops",
+                                          message: "Não foi possível carregar os dados.",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
